@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    {% block title %}
+        TESTE
+    {% endblock%}
+
+</head>
+<body>
+
+ 
+        
+    
+        {% block content %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="ip" id="" placeholder="ip ex: 192.168.0.1">
+                <input type="text" name="local" id="" placeholder="local: ">
+                <select name="fabricante" id="">
+                    <option value="vsolution">vsolution</option>
+                    <option value="fiberhome">fiberhome</option>
+                    <option value="zte">zte</option>
+                </select>
+                <input type="submit" value="Cadastrar">
+            </form>
+        {% endblock%}
+ 
+
+
+
+
+
+</body>
+</html>
