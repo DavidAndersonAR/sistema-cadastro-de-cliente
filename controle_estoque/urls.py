@@ -21,6 +21,11 @@ from sistema_web import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cadastro/', views.cadastro_produtos, name="cadastro_produtos"),
+    path('login/',views.login_user, name="login"),
+    path('cadastro_user/', views.cadastro, name="cadastro_user"),
+    path('', views.usuario, name="usuario"),
+    path('index/', views.index, name="index"),
+
 
 ]
 
