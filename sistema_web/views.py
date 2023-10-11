@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -10,6 +10,7 @@ def cadastro_produtos(request):
 
     return render(request, "cadastro_produto.html")
 
+# Responsavel pelo login do usuario
 def index(request):
 
     return render(request, "login.html")
@@ -48,3 +49,7 @@ def usuario(request):
 
     return redirect("login")
     #return JsonResponse("Usuario criado com sucesso")
+
+
+
+

@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sistema_web import views
+from clientes.views import cadastro_de_clientes, tela_inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,10 @@ urlpatterns = [
     path('cadastro_user/', views.cadastro, name="cadastro_user"),
     path('', views.usuario, name="usuario"),
     path('index/', views.index, name="index"),
+
+    path('tela_inicio/', tela_inicio, name="tela_inicio"),
+
+    path('tela_inicio/', cadastro_de_clientes, name="cadastro_de_clientes"),
 
 
 ]

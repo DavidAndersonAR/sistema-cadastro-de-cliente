@@ -11,7 +11,7 @@
 <body>
     <div class="container-login">
         <div class="login">
-            <form action="{% url 'usuario' %}" method="POST">
+            <form action="{% url 'usuario' %}" method="post">
                 {% csrf_token %}
                 <input type="text" name="user" id="user" placeholder="Username">
 

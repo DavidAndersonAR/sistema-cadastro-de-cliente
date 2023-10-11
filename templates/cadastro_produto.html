@@ -14,7 +14,7 @@
     
         {% block content %}
             <div class="conteudo-cadastro">
-                <form action="" method="post">
+                <form action="{% url 'cadastro_de_clientes' %}" method="POST">
                     {% csrf_token %}
                     <div class="nome">
                         <label for="">Nome: </label>
@@ -48,7 +48,7 @@
 
                     <div class="genero">
                         <label for="">Genero: </label>
-                        <select name="genero-select" id="">
+                        <select name="genero_select" id="">
                             <option value="masculino">Masculino</option>
                             <option value="feminino">Feminino</option>
                             <option value="outros">Outros</option>
@@ -57,11 +57,11 @@
 
                     <div class="endereco">
                         <label for="">Endereço Residencial: </label>
-                        <input type="text" name="rua" id="">
-                        <input type="text" name="complemento" id="">
-                        <input type="text" name="cidade" id="">
-                        <input type="text" name="estado" id="">
-                        <input type="text" name="cep" id="">
+                        <input type="text" name="rua" id="" placeholder="Rua">
+                        <input type="text" name="complemento" id="" placeholder="Complemento">
+                        <input type="text" name="cidade" id="" placeholder="cidade">
+                        <input type="text" name="estado" id="" placeholder="estado">
+                        <input type="text" name="cep" id="" placeholder="cep">
                     </div>
 
 
