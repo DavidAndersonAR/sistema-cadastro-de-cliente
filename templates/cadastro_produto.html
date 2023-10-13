@@ -14,7 +14,7 @@
     
         {% block content %}
             <div class="conteudo-cadastro">
-                <form action="{% url 'cadastro_de_clientes' %}" method="POST">
+                <form action="{% url 'cadastro_de_clientes' %}" method="post">
                     {% csrf_token %}
                     <div class="nome">
                         <label for="">Nome: </label>

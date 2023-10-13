@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    {% block title %}
+        Lista Clientes
+    {% endblock%}
+
+</head>
+<body>
+
+ 
+        
+    
+    {% block content %}
+        <div class="conteudo-cadastro">
+            <div class="trans_borde">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for cliente in clientes %}
+                            <tr>
+                                <td>{{cliente.id_usuario}}</td>
+                                <td>{{cliente.nome}}</td>
+                                <td>{{cliente.email}}</td>
+                                <td>
+                                    <a class="btn btn-default" href="{% url 'excluir_cliente' cliente.id_usuario %}"><span class="glyphicon glyphicon-trash"></span></a>
+                                    <!-- <button class="glyphicon glyphicon-trash"><a href="{% url 'excluir_cliente' cliente.id_usuario %}">Excluir</a></button> -->
+                                    <a class="btn btn-default" href="{% url 'editar_cliente' cliente.id_usuario %}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% endblock%}
+
+
+
+
+
+
+</body>
+</html>
